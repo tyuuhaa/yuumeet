@@ -24,11 +24,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r event_meeting_manager/requirements.txt
+        pip install -r requirements.txt
         pip install pyinstaller
 
     - name: Build with PyInstaller
-      working-directory: ./event_meeting_manager
       run: |
         python -m PyInstaller --onefile --noconsole --add-data "database/schema.sql;database" main.py
 
@@ -36,12 +35,12 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: YuuMeet-Windows
-        path: event_meeting_manager/dist/main.exe
+        path: dist/main.exe
 
     - name: Upload executable to GitHub Release
       if: github.event_name == 'release'
       uses: softprops/action-gh-release@v2
       with:
-        files: event_meeting_manager/dist/main.exe
+        files: dist/main.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

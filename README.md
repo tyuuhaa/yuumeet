@@ -1,4 +1,4 @@
-# Event Meeting Minutes Manager
+# YuuMeet
 
 Aplikasi desktop untuk mengelola hasil rapat, action items (tugas), dan deadline
 dalam organisasi, perusahaan, maupun kepanitiaan. Dibangun menggunakan **Python + Tkinter**

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# PyInstaller / Build outputs
+event_meeting_manager/build/
+event_meeting_manager/dist/
+event_meeting_manager/*.spec
+
+# App Data / Local User files
+event_meeting_manager/database/*.db
+event_meeting_manager/database/*.db-journal
+event_meeting_manager/exports/
